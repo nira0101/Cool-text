@@ -1,0 +1,42 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: sans-serif;
+  background-color: lightslategray;
+  margin: 0;
+}
+
+.text-animation {
+  --letter: 0s;
+  animation-name: text-animation_kf;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-timing-function: cubic-bezier(0, 0.73, 0.91, 1.42);
+  animation-delay: calc(var(--letter) * 0.1s);
+  animation-fill-mode: both;
+}
+
+@keyframes text-animation_kf {
+  0% {
+    transform: translate(0, 50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+span {
+  display: inline-block;
+}
